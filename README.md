@@ -62,7 +62,31 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Option 1: Deploy via Lovable
 Simply open [Lovable](https://lovable.dev/projects/0ba8341c-d73a-443d-9a98-15d1e699a4a1) and click on Share -> Publish.
+
+### Option 2: Deploy to GitHub Pages
+
+This project is configured for GitHub Pages deployment. Follow these steps:
+
+1. **Build the application locally:**
+   ```sh
+   npm install
+   npm run build
+   ```
+
+2. **Configure GitHub Pages:**
+   - Go to your GitHub repository
+   - Navigate to Settings > Pages
+   - Set source to "GitHub Actions"
+   - The workflow will automatically deploy when you push to main
+
+3. **Your app will be available at:**
+   ```
+   https://[your-username].github.io/kaushikghoshportfolio/
+   ```
+
+**Note:** The Vite configuration is already set up with the correct base path for GitHub Pages deployment.
 
 ## Can I connect a custom domain to my Lovable project?
 
