@@ -1,13 +1,49 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { motion } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Skills } from "@/components/Skills";
+import { Projects } from "@/components/Projects";
+import { Education } from "@/components/Education";
+import { Resume } from "@/components/Resume";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <motion.div 
+      className="min-h-screen bg-background"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Theme Toggle */}
+      <ThemeToggle />
+      
+      {/* Hero Section */}
+      <Hero />
+      
+      {/* About Section */}
+      <About />
+      
+      {/* Skills Section */}
+      <Skills />
+      
+      {/* Projects Section */}
+      <Projects />
+      
+      {/* Education Section */}
+      <Education />
+      
+      {/* Resume Section */}
+      <Resume />
+      
+      {/* Contact Section */}
+      <Contact />
+      
+      {/* Footer */}
+      <Footer />
+    </motion.div>
   );
 };
 
