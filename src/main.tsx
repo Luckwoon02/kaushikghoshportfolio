@@ -2,4 +2,12 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
-createRoot(document.getElementById("root")!).render(<App />);
+console.log("Starting React app...");
+
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  console.error("Root element not found! Make sure index.html has a div with id='root'");
+} else {
+  console.log("Root element found, mounting React app...");
+  createRoot(rootElement).render(<App />);
+}
